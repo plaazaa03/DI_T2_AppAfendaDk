@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name="PROVINCIA")
+@Table(name="PERSONA")
 public class Persona implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
