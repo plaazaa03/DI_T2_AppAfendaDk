@@ -64,7 +64,7 @@ public class PersonaController {
             currentPersona.setEmail(persona.getEmail());
             currentPersona.setProvincia(persona.getProvincia());
             currentPersona.setFecha_nacimiento(persona.getFecha_nacimiento());
-            currentPersona.setNum_hijoss(persona.getNum_hijos());
+            currentPersona.setNumHijos(persona.getNumHijos());
             currentPersona.setEstado_civil(persona.getEstado_civil());
             currentPersona.setSalario(persona.getSalario());
             currentPersona.setJubilado(persona.isJubilado());

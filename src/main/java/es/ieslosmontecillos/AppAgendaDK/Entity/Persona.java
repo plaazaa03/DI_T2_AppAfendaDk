@@ -18,7 +18,7 @@ public class Persona implements Serializable {
     @Column(name = "NOMBRE", nullable = false, length = 20)
     private String nombre;
     @Basic
-    @Column(name = "APELLIDOS", nullable = true,length = 40)
+    @Column(name = "APELLIDOS", nullable = false,length = 40)
     private String apellidos;
 
     @Basic
@@ -38,19 +38,19 @@ public class Persona implements Serializable {
 
     @Basic
     @Column(name = "NUM_HIJOS", nullable = true)
-    private int num_hijos;
+    private Short numHijos;
 
     @Basic
-    @Column(name = "ESTADO_CIVIL", nullable = true, length = 1)
-    private char estado_civil;
+    @Column(name = "ESTADO_CIVIL", length = 1, nullable = true)
+    private Character estadoCivil;
 
     @Basic
     @Column(name = "SALARIO",nullable = true,precision = 9 , scale = 2)
     private BigDecimal salario;
 
     @Basic
-    @Column(name = "JUBILADO",nullable = true)
-    private boolean jubilado;
+    @Column(name = "JUBILADO", nullable = true)
+    private Integer jubilado;
 
     @Basic
     @Column(name = "FOTO", nullable = true, length = 30)
@@ -128,20 +128,17 @@ public class Persona implements Serializable {
     }
     //NUM_HIJOS
 
-    public int getNum_hijos() {
-        return num_hijos;
-    }
+    public Short getNumHijos() {
+        return numHijos;
+    }    public void setNumHijos(Short numHijos) {this.numHijos = numHijos;}
 
-    public void setNum_hijoss(int num_hijos) {
-        this.num_hijos = num_hijos;
-    }
     //ESTADO_CIVIL
-    public char getEstado_civil(){
-        return estado_civil;
+    public Character getEstado_civil(){
+        return estadoCivil;
     }
 
-    public void setEstado_civil(char estado_civil) {
-        this.estado_civil = estado_civil;
+    public void setEstado_civil(Character estadoCivil) {
+        this.estadoCivil = estadoCivil;
     }
 
     //SALARIO
@@ -155,16 +152,10 @@ public class Persona implements Serializable {
     }
 
     //JUBILADO
-
-
-    public boolean isJubilado() {
-        return jubilado;
-    }
-
-    public void setJubilado(boolean jubilado) {
+    public Integer isJubilado() {        return jubilado;
+    }    public void setJubilado(Integer jubilado) {
         this.jubilado = jubilado;
     }
-
     //FOTO
 
     public String getFoto(){
@@ -188,3 +179,4 @@ public class Persona implements Serializable {
         return Objects.hash(id, nombre, apellidos);
     }
 }
+
